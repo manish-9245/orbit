@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 
 export const siteConfig: Metadata = {
+  metadataBase: new URL("https://yourdomain.com"), // replace with your actual URL
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   title: "Orbit",
   description: "Modern Next.js powered Video calling app",
   keywords: [
@@ -41,6 +47,29 @@ export const siteConfig: Metadata = {
   authors: {
     name: "Manish Tiwari",
     url: "https://github.com/manish-9245",
+  },
+  openGraph: {
+    title: "Orbit",
+    description: "Modern Next.js powered Video calling app",
+    url: "https://orbit.buildwithmanish.com", // replace with your actual URL
+    siteName: "Orbit",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Orbit - Modern Video calling app",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Orbit",
+    description: "Modern Video calling website",
+    creator: "@manish_9245", // replace with your Twitter handle
+    images: ["/og.png"],
   },
 } as const;
 
